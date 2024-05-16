@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --instagram-gradient: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));   
+    --Instagram: linear-gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --YouTube: hsl(348, 97%, 39%);
+    
+    --White-BG: hsl(0, 0%, 100%);
+    --Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+    --Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+    --Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+    --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+
+
+    --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+    --Desaturated-Blue-Text: hsl(228, 34%, 66%);
+    --White-Text: hsl(0, 0%, 100%);
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter';
+}
+
+main {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.type-1 {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--Light-Grayish-Blue-Card-BG);
+    width: 100%;
+    padding: 30px 0px;
+    border-radius: 5px;
+}
+
+.app,.stats {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.follow-count-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: var(--Dark-Grayish-Blue-Text);
+}
+
+.follow-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.number {
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--Very-Dark-Blue-Text);
+}
+
+.green {
+    color: var(--Lime-Green);
+}
+
+.red {
+    color: var(--Bright-Red);
+}
+
+h2 {
+    color: var(--Very-Dark-Blue-Text);
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue-Text);
+}
+
+.secondary-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.type-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: var(--Light-Grayish-Blue-Card-BG);
+    width: 100%;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top,.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.top {
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue-Text);
+}
+
+.bottom {
+    color: var(--Very-Dark-Blue-Text);
+}
+
+.theme-button-changer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    background: linear-gradient(to right,hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.button::before{
+    position: absolute;
+    content: '';
+    background-color: hsla(213, 33%, 19%, 1);
+    width: 22.5px;
+    height: 22.5px;
+    border-radius: 200px;
+    margin: 4px;
+    transition: 0.2s;
+}
+input:checked + .button{
+    background-color: hsl(230, 22%, 74%);
+}
+input:checked + .button::before{
+    background-color: white;
+    transform: translateX(30px);
+}
+
+input {
+    display: none;
+}
+
+.button.active {
+    background: none;
+    background-color: hsl(230, 22%, 74%);
+}
+
+body.active{
+    background-color: var(--Very-Dark-Blue-BG);
+}
+
+.heading.active {
+    color: var(--Desaturated-Blue-Text);
+}
+
+hr.active {
+    border-color: var(--Desaturated-Blue-Text);
+}
+
+h2.active {
+    color: var(--White-Text);
+}
+
+.type-1.active {
+    color: var(--Desaturated-Blue-Text);
+    background-color: var(--Dark-Desaturated-Blue-Card-BG);
+}
+
+.type-2.active {
+    background-color: var(--Dark-Desaturated-Blue-Card-BG);
+}
+
+.top.active {
+    color: var(--Desaturated-Blue-Text);
+}
+
+.number.active {
+    color: var(--White-Text);
+}
+
+.bottom.active{
+    color: var(--White-Text);
+}
+
+.card-1 {
+    border-top: 3px solid var(--Facebook);
+}
+
+.card-2 {
+    border-top: 3px solid var(--Twitter);
+}
+
+.card-3 {
+    position: relative;
+}
+
+.card-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px; 
+    background: var(--instagram-gradient);
+    border-top-left-radius: inherit; 
+    border-top-right-radius: inherit;
+}
+
+.card-4 {
+    border-top: 3px solid var(--YouTube);
+}
+
+@media (min-width:375px) {
+
+    main {
+        width: 80%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    .heading {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .theme {
+        gap: 20px;
+    }
+
+    .follow-count-cards {
+        flex-direction: row;
+    }
+
+    .secondary-info {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        padding: 0px 20px;
+    }
+}
